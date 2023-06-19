@@ -1,19 +1,25 @@
+import { BsFillCircleFill } from 'react-icons/bs';
 import PropTypes from 'prop-types';
+import css from './FriendListItem.module.css';
 
 export const FriendListItem = ({ friends }) => {
   return (
-      friends.map(item => (
-        <li className="item" key={item.id}>
-          <span className="status">{item.isOnline ? 'Online' : 'Offline'}</span>
+    <ul className={css.friendList}>
+      {friends.map(item => (
+        <li className={css.item} key={item.id}>
+          <span >
+            <BsFillCircleFill className={item.isOnline ? css.statusOnline : css.statusOffline}/>
+          </span>
           <img
-            className="avatar"
+            className={css.avatar}
             src={item.avatar}
             alt="User avatar"
             width="48"
           />
-          <p className="name">{item.name}</p>
+          <p className={css.name}>{item.name}</p>
         </li>
-      ))
+      ))}
+    </ul>
   );
 };
 
