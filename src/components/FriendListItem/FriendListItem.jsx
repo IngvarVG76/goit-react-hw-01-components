@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import css from './FriendListItem.module.css';
 
 export const FriendListItem = ({ friend }) => {
-  const { id, isOnline, avatar, name } = friend;
+  const { isOnline, avatar, name } = friend;
 
   return (
-    <li className={css.item} key={id}>
+    <li className={css.item}>
       <span>
         <BsFillCircleFill
           className={isOnline ? css.statusOnline : css.statusOffline}

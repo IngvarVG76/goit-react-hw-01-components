@@ -1,5 +1,5 @@
 // import user from '.../database/user.json';
-import user from "../../database/user.json";
+import user from '../../database/user.json';
 import data from '../../database/data.json';
 import friends from '../../database/friends.json';
 import transactions from '../../database/transactions.json';
