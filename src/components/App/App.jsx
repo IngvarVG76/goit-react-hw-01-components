@@ -1,7 +1,8 @@
-import user from '../database/user.json';
-import data from '../database/data.json';
-import friends from '../database/friends.json';
-import transactions from '../database/transactions.json';
+// import user from '.../database/user.json';
+import user from "../../database/user.json";
+import data from '../../database/data.json';
+import friends from '../../database/friends.json';
+import transactions from '../../database/transactions.json';
 
 import { Profile } from '../Profile/Profile';
 import { Statistics } from '../Statistics/Statistics';
@@ -16,9 +17,7 @@ export const App = () => {
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
       <Statistics title="Upload stats" data={data} />
       <FriendList friends={friends} />

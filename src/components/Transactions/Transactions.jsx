@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './Transactions.module.css';
+import { capitalizeFirstLetter } from '../../helpers/helpers';
 
 export const Transactions = ({ transactions }) => {
   return (
@@ -33,8 +34,4 @@ Transactions.propTypes = {
       currency: PropTypes.string.isRequired,
     })
   ).isRequired,
-};
-
-const capitalizeFirstLetter = str => {
-  return str.charAt(0).toUpperCase() + str.slice(1);
 };
